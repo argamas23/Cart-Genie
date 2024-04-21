@@ -79,7 +79,9 @@ class User {
       age: map['age'] != null ? map['age'] as String : null,
       gender: map['gender'] != null ? map['gender'] as String : null,
       address: map['address'] != null ? map['address'] as String : null,
-      lastUpdate: map['lastUpdate'] != null ? DateTime.fromMillisecondsSinceEpoch(map['lastUpdate'] as int) : null,
+       lastUpdate: map['lastUpdate'] != null
+          ? DateTime.parse(map['lastUpdate'] as String)
+          : null,
     );
   }
 
